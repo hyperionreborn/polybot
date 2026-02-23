@@ -1,0 +1,27 @@
+{
+  "name": "polymarket-btc-bot",
+  "version": "1.0.0",
+  "description": "Polymarket BTC 5m/15m sniper and hedge bot",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/index.js",
+    "client": "cd client && npx vite --port 3001",
+    "build": "cd client && npx vite build",
+    "server:dev": "nodemon server/index.js",
+    "test": "node --test tests"
+  },
+  "dependencies": {
+    "@polymarket/clob-client": "^4.1.0",
+    "axios": "^1.7.0",
+    "concurrently": "^9.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.21.0",
+    "socket.io": "^4.8.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

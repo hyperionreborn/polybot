@@ -1,0 +1,8 @@
+node_modules/
+client/node_modules/
+client/dist/
+.env
+trades.json
+data/
+*.log
+.cursor/
